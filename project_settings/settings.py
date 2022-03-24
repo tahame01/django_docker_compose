@@ -54,7 +54,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend', # new
 )
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
-
+DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
