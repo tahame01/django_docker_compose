@@ -4,5 +4,18 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-<h1 class="text-white">Homepage</h1>
+<div class="container p-5  my-5 text-white">
+<h1>Homepage</h1>
+
+{% if user.is_authenticated %}
+Hi {{ user.email }}!
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+<a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+
+
+</div>
 {% endblock content %}
